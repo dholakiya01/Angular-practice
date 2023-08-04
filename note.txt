@@ -1,0 +1,31 @@
+::interpolation::
+mean ts na data html ma chalavava
+
+type of not check in html,
+increment -decrement not allow ex:: a++,b--,
+new keywords not allow,
+
+
+check all comand regarding so type ng help
+
+ng generater ng global module name/innername
+ng generater ng global component name
+ng generater ng global component name
+ ng g  interface dummy
+ ng g class dummy
+ ng g m user-auth/login class Login
+ ng generate component name --inline-style  css file ny bane ts ma inline css thse
+ ng generate component name --inline-template html file ny bane ts na template ma thase html
+ ng generate component name --inline-template--inline-style only ts file banse
+
+ use if-else use this in html element *ngIf="name else elseBlock" and use for else condition
+  <ng-template #elseBlock></ng-template> tag
+
+  Switch case:
+  switch maate[ngSwitch]="color" and before 
+  case maate *ngSwitchCase = "'red'" use thase ane temathi ky na hoy tyare
+  *ngSwitchDefault kay na hoy tyare default ma rakhva
+
+  Forloop:
+  for loop mmate component na class ma varialble ma array store karavo ane html ma loop maate element ma *ngFor= "let item of user(user is varialble name) ane element ma item print kravi devani ex: <h1 *ngFor = "let item of user"> {{item}}</h1>
+

@@ -1,0 +1,10 @@
+<!-- <h3 [style.color]="'red'">loop works!</h3> -->
+<h3 [style.color]="color" [style.backgroundColor]="bgcolor">loop works!</h3>
+<button (click)="onchangecolor()">click</button>
+<ul *ngFor="let item of data">
+<li > Name is: {{item.name}} </li>
+<li > age is: {{item.age}} </li>
+<ul *ngFor="let user of item.socialaccounts">
+    <li>{{user}}</li>    
+</ul>
+</ul>

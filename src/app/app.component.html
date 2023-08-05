@@ -1,4 +1,38 @@
-<app-header></app-header>
+<app-header ></app-header>
+
+<form #basicform="ngForm" (ngSubmit)="getformdata(basicform.value)">
+  <input type="text" ngModel name="email" placeholder="Enter Email " /><br><br>
+  <input type="text" ngModel name="password" placeholder="Enter password" /><br><br>
+  <button>click</button>
+</form><br><br>
+
+<button mat-raised-button color="primary" (click)="toggle()">Toggle</button>
+<p >{{userData.email}}</p><br><br>
+<div *ngIf="display">
+  <p>Hello World!</p>
+  <p>Hello World!</p>
+  <p>Hello World!</p>
+  <p>Hello World!</p>
+</div>
+
+<ul *ngFor="let item of userdata">
+  <app-child [user]="item"></app-child>
+</ul>
+
+<form>
+<input type="text" placeholder="Enter New text" name="data"  #task /><br><br>
+<button mat-raised-button color="primary" (click)="addtask(task.value)" >Add Task</button>
+</form><br><br>
+
+<app-user-list></app-user-list><br><br>
+
+<ul *ngFor="let item of list" style="margin-left: 30px;">
+  <li>{{item.name}}   <button mat-raised-button color="warn" (click)="removetask(item.id)">remove</button></li>
+</ul>
+
+<button (click)="sendvalue()">click</button>
+<app-child [item]="dataparent"></app-child>
+
 
 <!-- <h1>Hello World {{title }}</h1> -->
 

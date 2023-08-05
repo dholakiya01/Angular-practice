@@ -6,6 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./user-list.component.css']
 })
 export class UserListComponent {
- show = true
- color = "feld"
+ show = false
+ color = "red"
+
+ name = ""
 }

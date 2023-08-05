@@ -29,3 +29,24 @@ ng generater ng global component name
   Forloop:
   for loop mmate component na class ma varialble ma array store karavo ane html ma loop maate element ma *ngFor= "let item of user(user is varialble name) ane element ma item print kravi devani ex: <h1 *ngFor = "let item of user"> {{item}}</h1>
 
+** this example is template refrence varialble  ** 
+
+<input type="text" #task />
+<button (click)="addtask(task.value)" >Add Task</button>
+
+** this example is send data child to parent **
+
+<input type="text" [(ngModel)]="name" placeholder="Enter name">
+<p>{{name}}</p>
+
+this name get in parent component and data send karva [(ngModel)] no use thy che.
+
+
+Basic Of typescript *** 
+
+basic types : string, boolean, number, array, object, undefind, null 
+aama thi koi types naki na hoy tyre any use krvu,
+number string ne object array maa store keva sathe string[]=[] ,string{}={}, avi rite lkhvu 
+
+pipes ** 
+data formate change krva ex: uppercase, lowercase text krva etc..

@@ -6,6 +6,8 @@
   <button>click</button>
 </form><br><br>
 
+<span>{{20 | usdinr : 20 }}</span><br><br>
+
 <button mat-raised-button color="primary" (click)="toggle()">Toggle</button>
 <p >{{userData.email}}</p><br><br>
 <div *ngIf="display">
@@ -30,8 +32,17 @@
   <li>{{item.name}}   <button mat-raised-button color="warn" (click)="removetask(item.id)">remove</button></li>
 </ul>
 
-<button (click)="sendvalue()">click</button>
-<app-child [item]="dataparent"></app-child>
+<button (click)="sendvalue()">click</button><br/><br/>
+
+<form #loginform="ngForm" (ngSubmit)="loginuser(loginform.value)">
+  <input type="text" ngModel name="name" placeholder="Enter name"><br><br>
+  <input type="password" ngModel name="password" placeholder="Enter password"><br><br>
+<button mat-raised-button>click</button>
+</form>
+<router-outlet></router-outlet>
+
+
+<!-- <app-child [item]="dataparent"></app-child> -->
 
 
 <!-- <h1>Hello World {{title }}</h1> -->

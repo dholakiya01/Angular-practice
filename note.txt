@@ -1,3 +1,6 @@
+Html file is : template file,
+Ts ffile is : class file
+
 ::interpolation::
 mean ts na data html ma chalavava
 
@@ -50,3 +53,44 @@ number string ne object array maa store keva sathe string[]=[] ,string{}={}, avi
 
 pipes ** 
 data formate change krva ex: uppercase, lowercase text krva etc..
+
+Advance Pipes **
+pipes ma main javascript ni method j add karvani hoy pan judi rite..
+
+1. params pipe.
+params pipe aetle pipe ni sathe parameter pass karva 
+ex: slice method ma slice(1,5) avi rite js ma use krta but ts ma {{data | pipe : parms1 : parms 2 }} aa rite pass thase.
+
+2. multiple pipe.
+jevi rite peli pipe muki tena baju ma j biji pipe mukvi ex:{{data | pipe : p1 : p2  | second pipe }}
+
+3. currency pipe.
+world na currency no symbol batavva use thy example $ hoy to <p>{{200 | "USD"}}</p>
+
+custom pipe ** 
+
+apdi rite je banavi te pipe custom pipe 
+tene maate pela folder k file banavi comand ex: ng c p filename
+file banya pa6i main ts vali file nu name html ma jodi devu ane return ma je return krvu hoy te krvu ane arguments pass krva hoy to variable banavi return ma pass kri devo
+
+template driven form ** 
+
+je form ni handleling html(template)side thati hoy tene template driven form kevay
+value set, get, error show, validation jeva kaam aa file ma thy 6
+
+forms ni details jova maate (data.value) hoy tevi rite (data.controls) lakhva thi thay jaay
+
+
+Using this way in index.js in backend ** 
+
+const router = require('./admin/src/routes/User.routes');
+app.use(router);
+app.use(bodyParser.json({limit:'50mb'}));
+app.use(bodyParser.urlencoded({limit:"50mb",extended:true,parameterLimit:5000}))    
+app.use(cors);
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+Model **
+validation lagadva front end ma je mate validation aek jagyaye define kri ane export kri import pan karavi sakay 
+je mate koi file ma export interface name lkhi lkhi devani je property lkvi hoy te

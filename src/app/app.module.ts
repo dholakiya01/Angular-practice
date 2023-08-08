@@ -11,6 +11,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {MatButtonModule} from '@angular/material/button';
 import { ChildComponent } from './child/child.component';
+import { UsdinrPipe } from './pipes/usdinr.pipe';
+import { AppRoutingModule } from './app-routing.module';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
+import { NoPageComponent } from './no-page/no-page.component';
 
 
 @NgModule({
@@ -20,14 +26,20 @@ import { ChildComponent } from './child/child.component';
     LoginComponent,
     LoopComponent,
     HeaderComponent,
-    ChildComponent
+    ChildComponent,
+    UsdinrPipe,
+    HomeComponent,
+    AboutComponent,
+    ContactComponent,
+    NoPageComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     BrowserAnimationsModule,
     NgbModule,
-    MatButtonModule
+    MatButtonModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

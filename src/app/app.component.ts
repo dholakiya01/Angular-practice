@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { EmailValidator, NgForm } from '@angular/forms';
+import { datatype } from './user-list/user-list.component';
 
 @Component({
   selector: 'app-root',
@@ -61,5 +62,19 @@ export class AppComponent {
     {name:"keval",email:"keval@gmail.com",password:"123"},
     {name:"rakesh",email:"rakesh@gmail.com",password:"123"},
     {name:"parth",email:"parth@gmail.com",password:"123"},
-  ]
+  ];
+
+  loginuser(item:any){
+    console.log(item)
+  };
+
+  getdata(){
+    const data:datatype = {
+      name:'',
+      email:'',
+      password:''
+      
+    }
+    return data
+  }
 }

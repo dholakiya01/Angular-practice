@@ -11,3 +11,9 @@ export class UserListComponent {
 
  name = ""
 }
+
+export interface datatype{
+  name:string,
+  email:string,
+  password:string
+}

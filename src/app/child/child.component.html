@@ -2,8 +2,12 @@
 <p>{{item}}</p>
 
 <li class="list">{{user.name | uppercase}}</li>
-<li class="list">{{user.email | titlecase}}</li>
-<li class="list">{{user.password | lowercase}}</li>
+<!-- <li class="list">{{user.email | titlecase}}</li> -->
 
-<span>{{today | date}}</span>
+<!-- params pipe -->
 
+<li class="list">{{user.email | slice : 0 : 7 | uppercase | json }}</li>
+<li class="list">{{user.password | lowercase}}</li><br>
+
+<!-- <span>{{today | date}}</span> -->
+<span>{{today | date : 'fullDate'}}</span>

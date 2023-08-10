@@ -128,3 +128,47 @@ Lifecycle Hook **
 3. ngOnInit =  component initilize thay tyare use thy
 4. ngFocheck = koi change detect thy tyre button click,koi action create thy,value change ,jyre component no koi part rerender thy tyre  
 5. ngAfterContentInit = 
+
+
+Observables **
+
+1. synchronous ane asynchronous function jevu kaam kare 6  
+2. promise jevu kaam kre
+3. service subscribe hse to j chalse
+4. database thi data lavti vakhte Observables use thy 
+5. define service():Observables<any>
+6. import krvanu rxjs thi 
+
+subjects **
+
+1. cross component communication krva use thay
+2. html, ts, and service aa no use thse
+3. service ma aek subject banvi levo ex: new subject<any>(); import krvu rxjs
+4. subject na name ne ts ma add kri value add krvi and html ma define kri devi 
+5. exercise : input box ma type kri ne click par input value badha component ma update thy javi Join
+
+aek service banavisu tema variable name api subject apsu ex: name = new subject();
+main component ma jai html ma input ane button banavisu ane tema id pass krisu ane button na function ma pass krisu 
+ex: <h1>User name : {{username}}</h1>
+<input type="text" #box><br><br>
+<!-- <button (abort)="">click</button> -->
+<button (click)="uservalue(box)">click</button>
+
+aa function ne ts ma banavu 
+aek constructor lay service add krvi ane subscribe krvi 
+
+ constructor(private users:UserdataService) {
+    this.users.username.subscribe((item:any)=>{
+      this.username = item 
+    });
+ }
+
+ tyar bad je je function ma change krva hoy tya tya service add kri subscribe kravavi  
+ ane banavel function ma service ni detail add krvi ane next ma args pass kri deva jethi thy jase
+ ex: 
+  uservalue(data:any){
+    console.log(data.value);
+    // this.username = data.value
+    this.users.username.next(data.value)
+
+  }

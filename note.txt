@@ -94,3 +94,37 @@ app.use(express.urlencoded({ extended: true }));
 Model **
 validation lagadva front end ma je mate validation aek jagyaye define kri ane export kri import pan karavi sakay 
 je mate koi file ma export interface name lkhi lkhi devani je property lkvi hoy te
+
+Types Of automation testing **
+
+1.Unit test case
+2.integration
+3.End-to-End
+
+Angular automation testing ** 
+
+1. Protector - Run test case on browser
+2. Jasmine - testing environment, Run spec file for the test case.
+3. Karma - Run test case in multiple browser.
+
+
+learning and practice angular model and interface, testings, module routing, group routing, lazy loading and making crud op.. in mongodb 
+
+typescript Generics ** 
+
+koi function ne reuse krva hoy te mate banavay
+function na data type ke parameter na datatypes define karvani jarur na pde, aek j var define kri devathi...
+
+function user<T>(data:T):T{
+  return data
+}
+console.log(user(all value )) 
+T aek identifire 6 
+
+Lifecycle Hook ** 
+
+1. constructor 
+2. ngOnchanges = arguments sathe use thy
+3. ngOnInit =  component initilize thay tyare use thy
+4. ngFocheck = koi change detect thy tyre button click,koi action create thy,value change ,jyre component no koi part rerender thy tyre  
+5. ngAfterContentInit = 
